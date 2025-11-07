@@ -5,7 +5,7 @@ dataFactory/v1.0-trainval_meta
 environmnet/models/
 models/blip2-flan-t5-xxl
 models/blip2-opt-2.7b
-models/deepseek-llm-7b-base
+models/deepseek-ai
 models/Llama-2-7b
 models/Llama-2-7b-hf
 models/Meta-Llama-3-8B-Instruct
