@@ -1,0 +1,13 @@
+# 忽略 checkpoints 目录下所有文件
+checkpoints/
+dataFactory/nuScenes/
+dataFactory/v1.0-trainval_meta
+environmnet/models/
+models/
+# 忽略大数据文件
+*.pkl
+*.index
+*.ipynb
+*.png
+*.pdf
+*.db
