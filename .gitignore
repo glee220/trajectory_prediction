@@ -3,7 +3,17 @@ checkpoints/
 dataFactory/nuScenes/
 dataFactory/v1.0-trainval_meta
 environmnet/models/
-models/
+models/blip2-flan-t5-xxl
+models/blip2-opt-2.7b
+models/deepseek-llm-7b-base
+models/Llama-2-7b
+models/Llama-2-7b-hf
+models/Meta-Llama-3-8B-Instruct
+models/Mistral-7B-Instruct-v0.2
+models/Qwen2.5-7B-Instruct
+models/vicuna-7b-v1.5
+models/vit-base-patch16-224-in21k
+models/WizardLM-7B-V1.0
 # 忽略大数据文件
 *.pkl
 *.index
