@@ -1,0 +1,474 @@
+master_port: 22805
+[2025-07-17 08:48:24,883] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[2025-07-17 08:48:30,466] [WARNING] [runner.py:202:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+Detected CUDA_VISIBLE_DEVICES=0,1,2,3: setting --include=localhost:0,1,2,3
+[2025-07-17 08:48:30,466] [INFO] [runner.py:568:main] cmd = /home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMSwgMiwgM119 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None /home/liuyanjiao/trajectory_predict/trajectory_predict_train.py --num_workers 4 --deepspeed ./config/ds_config_onslurm.json --llm_model LLAMA --llm_model_path ./models/Llama-2-7b-hf/ --model_comment llama2_map_train --use_map --learning_rate 1e-5
+[2025-07-17 08:48:33,507] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[2025-07-17 08:48:35,176] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0, 1, 2, 3]}
+[2025-07-17 08:48:35,176] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=4, node_rank=0
+[2025-07-17 08:48:35,176] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1, 2, 3]})
+[2025-07-17 08:48:35,176] [INFO] [launch.py:164:main] dist_world_size=4
+[2025-07-17 08:48:35,176] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0,1,2,3
+[2025-07-17 08:48:35,177] [INFO] [launch.py:256:main] process 860068 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_predict/trajectory_predict_train.py', '--local_rank=0', '--num_workers', '4', '--deepspeed', './config/ds_config_onslurm.json', '--llm_model', 'LLAMA', '--llm_model_path', './models/Llama-2-7b-hf/', '--model_comment', 'llama2_map_train', '--use_map', '--learning_rate', '1e-5']
+[2025-07-17 08:48:35,178] [INFO] [launch.py:256:main] process 860069 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_predict/trajectory_predict_train.py', '--local_rank=1', '--num_workers', '4', '--deepspeed', './config/ds_config_onslurm.json', '--llm_model', 'LLAMA', '--llm_model_path', './models/Llama-2-7b-hf/', '--model_comment', 'llama2_map_train', '--use_map', '--learning_rate', '1e-5']
+[2025-07-17 08:48:35,178] [INFO] [launch.py:256:main] process 860070 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_predict/trajectory_predict_train.py', '--local_rank=2', '--num_workers', '4', '--deepspeed', './config/ds_config_onslurm.json', '--llm_model', 'LLAMA', '--llm_model_path', './models/Llama-2-7b-hf/', '--model_comment', 'llama2_map_train', '--use_map', '--learning_rate', '1e-5']
+[2025-07-17 08:48:35,179] [INFO] [launch.py:256:main] process 860071 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_predict/trajectory_predict_train.py', '--local_rank=3', '--num_workers', '4', '--deepspeed', './config/ds_config_onslurm.json', '--llm_model', 'LLAMA', '--llm_model_path', './models/Llama-2-7b-hf/', '--model_comment', 'llama2_map_train', '--use_map', '--learning_rate', '1e-5']
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+[2025-07-17 08:49:03,399] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-17 08:49:03,417] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-17 08:49:03,437] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-07-17 08:49:03,437] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[2025-07-17 08:49:05,861] [INFO] [comm.py:637:init_distributed] cdb=None
+[2025-07-17 08:49:05,861] [INFO] [comm.py:637:init_distributed] cdb=None
+[2025-07-17 08:49:05,861] [INFO] [comm.py:637:init_distributed] cdb=None
+[2025-07-17 08:49:05,861] [INFO] [comm.py:637:init_distributed] cdb=None
+[2025-07-17 08:49:05,861] [INFO] [comm.py:668:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+LLM (1/3) Loading Llama-2-7b-hf config ...
+LLM (1/3) Config loaded ✔
+LLM (2/3) Loading Llama-2-7b-hf weights ...
+LLM (1/3) Loading Llama-2-7b-hf config ...
+LLM (1/3) Loading Llama-2-7b-hf config ...
+LLM (1/3) Config loaded ✔
+LLM (2/3) Loading Llama-2-7b-hf weights ...
+LLM (1/3) Config loaded ✔
+LLM (2/3) Loading Llama-2-7b-hf weights ...
+LLM (1/3) Loading Llama-2-7b-hf config ...
+LLM (1/3) Config loaded ✔
+LLM (2/3) Loading Llama-2-7b-hf weights ...
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [01:12<01:12, 72.14s/it]Loading checkpoint shards:  50%|█████     | 1/2 [01:12<01:12, 72.16s/it]Loading checkpoint shards:  50%|█████     | 1/2 [01:12<01:12, 72.29s/it]Loading checkpoint shards:  50%|█████     | 1/2 [01:11<01:11, 71.97s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:34<00:00, 42.63s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:34<00:00, 47.08s/it]
+LLM (2/3) Weights loaded ✔  device=cpu
+LLM (3/3) Loading tokenizer ...
+Loading checkpoint shards: 100%|██████████| 2/2 [01:34<00:00, 42.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:34<00:00, 47.07s/it]
+LLM (2/3) Weights loaded ✔  device=cpu
+LLM (3/3) Loading tokenizer ...
+Loading checkpoint shards: 100%|██████████| 2/2 [01:33<00:00, 42.55s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:33<00:00, 46.96s/it]
+LLM (2/3) Weights loaded ✔  device=cpuLoading checkpoint shards: 100%|██████████| 2/2 [01:34<00:00, 42.64s/it]
+LLM (3/3) Loading tokenizer ...
+Loading checkpoint shards: 100%|██████████| 2/2 [01:34<00:00, 47.07s/it]
+LLM (2/3) Weights loaded ✔  device=cpu
+LLM (3/3) Loading tokenizer ...
+LLM (3/3) Tokenizer loaded ✔
+LLM (3/3) Tokenizer loaded ✔
+LLM (3/3) Tokenizer loaded ✔
+LLM (3/3) Tokenizer loaded ✔
+[2025-07-17 08:50:44,500] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed info: version=0.14.2, git-hash=unknown, git-branch=unknown
+[2025-07-17 08:51:15,262] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2025-07-17 08:51:15,263] [INFO] [logging.py:96:log_dist] [Rank 0] Using client Optimizer as basic optimizer
+[2025-07-17 08:51:15,264] [INFO] [logging.py:96:log_dist] [Rank 0] Removing param_group that has no 'params' in the basic Optimizer
+[2025-07-17 08:51:15,268] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Basic Optimizer = Adam
+[2025-07-17 08:51:15,268] [INFO] [utils.py:56:is_zero_supported_optimizer] Checking ZeRO support for optimizer=Adam type=<class 'torch.optim.adam.Adam'>
+[2025-07-17 08:51:15,268] [INFO] [logging.py:96:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 2 optimizer
+[2025-07-17 08:51:15,268] [INFO] [stage_1_and_2.py:148:__init__] Reduce bucket size 200000000
+[2025-07-17 08:51:15,268] [INFO] [stage_1_and_2.py:149:__init__] Allgather bucket size 200000000
+[2025-07-17 08:51:15,268] [INFO] [stage_1_and_2.py:150:__init__] CPU Offload: False
+[2025-07-17 08:51:15,268] [INFO] [stage_1_and_2.py:151:__init__] Round robin gradient partitioning: False
+[2025-07-17 08:51:20,864] [INFO] [utils.py:779:see_memory_usage] Before initializing optimizer states
+[2025-07-17 08:51:20,865] [INFO] [utils.py:780:see_memory_usage] MA 13.13 GB         Max_MA 13.26 GB         CA 13.26 GB         Max_CA 13 GB 
+[2025-07-17 08:51:20,865] [INFO] [utils.py:787:see_memory_usage] CPU Virtual Memory:  used = 31.84 GB, percent = 6.3%
+[2025-07-17 08:51:20,983] [INFO] [utils.py:779:see_memory_usage] After initializing optimizer states
+[2025-07-17 08:51:20,983] [INFO] [utils.py:780:see_memory_usage] MA 13.13 GB         Max_MA 13.39 GB         CA 13.52 GB         Max_CA 14 GB 
+[2025-07-17 08:51:20,984] [INFO] [utils.py:787:see_memory_usage] CPU Virtual Memory:  used = 31.84 GB, percent = 6.3%
+[2025-07-17 08:51:20,984] [INFO] [stage_1_and_2.py:543:__init__] optimizer state initialized
+[2025-07-17 08:51:21,098] [INFO] [utils.py:779:see_memory_usage] After initializing ZeRO optimizer
+[2025-07-17 08:51:21,099] [INFO] [utils.py:780:see_memory_usage] MA 13.13 GB         Max_MA 13.13 GB         CA 13.52 GB         Max_CA 14 GB 
+[2025-07-17 08:51:21,099] [INFO] [utils.py:787:see_memory_usage] CPU Virtual Memory:  used = 31.84 GB, percent = 6.3%
+[2025-07-17 08:51:21,100] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Final Optimizer = Adam
+[2025-07-17 08:51:21,100] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed using client LR scheduler
+[2025-07-17 08:51:21,100] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+[2025-07-17 08:51:21,100] [INFO] [logging.py:96:log_dist] [Rank 0] step=0, skipped=0, lr=[1e-05], mom=[(0.9, 0.999)]
+[2025-07-17 08:51:21,101] [INFO] [config.py:996:print] DeepSpeedEngine configuration:
+[2025-07-17 08:51:21,101] [INFO] [config.py:1000:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2025-07-17 08:51:21,101] [INFO] [config.py:1000:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+[2025-07-17 08:51:21,101] [INFO] [config.py:1000:print]   amp_enabled .................. False
+[2025-07-17 08:51:21,101] [INFO] [config.py:1000:print]   amp_params ................... False
+[2025-07-17 08:51:21,101] [INFO] [config.py:1000:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2025-07-17 08:51:21,101] [INFO] [config.py:1000:print]   bfloat16_enabled ............. True
+[2025-07-17 08:51:21,101] [INFO] [config.py:1000:print]   bfloat16_immediate_grad_update  False
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   checkpoint_parallel_write_pipeline  False
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   checkpoint_tag_validation_enabled  True
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   checkpoint_tag_validation_fail  False
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f827c131210>
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   communication_data_type ...... None
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   compile_config ............... enabled=False backend='inductor' kwargs={}
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   curriculum_enabled_legacy .... False
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   curriculum_params_legacy ..... False
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   data_efficiency_enabled ...... False
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   dataloader_drop_last ......... False
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   disable_allgather ............ False
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   dump_state ................... False
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   dynamic_loss_scale_args ...... None
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   eigenvalue_enabled ........... False
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   eigenvalue_gas_boundary_resolution  1
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   eigenvalue_layer_num ......... 0
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   eigenvalue_max_iter .......... 100
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   eigenvalue_stability ......... 1e-06
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   eigenvalue_tol ............... 0.01
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   eigenvalue_verbose ........... False
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   elasticity_enabled ........... False
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "recompute_fwd_factor": 0.0, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   fp16_auto_cast ............... None
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   fp16_enabled ................. False
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   fp16_master_weights_and_gradients  False
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   global_rank .................. 0
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   grad_accum_dtype ............. None
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   gradient_accumulation_steps .. 2
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   gradient_clipping ............ 1.0
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   gradient_predivide_factor .... 1.0
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   graph_harvesting ............. False
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   initial_dynamic_scale ........ 1
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   load_universal_checkpoint .... False
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   loss_scale ................... 1.0
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   memory_breakdown ............. False
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   mics_hierarchial_params_gather  False
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   mics_shard_size .............. -1
+[2025-07-17 08:51:21,102] [INFO] [config.py:1000:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') enabled=False
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   optimizer_legacy_fusion ...... False
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   optimizer_name ............... None
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   optimizer_params ............. None
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0, 'pipe_partitioned': True, 'grad_partitioned': True}
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   pld_enabled .................. False
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   pld_params ................... False
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   prescale_gradients ........... False
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   scheduler_name ............... None
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   scheduler_params ............. None
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   seq_parallel_communication_data_type  torch.float32
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   sparse_attention ............. None
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   sparse_gradients_enabled ..... False
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   steps_per_print .............. inf
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   train_batch_size ............. 128
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   train_micro_batch_size_per_gpu  16
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   use_data_before_expert_parallel_  False
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   use_node_local_storage ....... False
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   wall_clock_breakdown ......... False
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   weight_quantization_config ... None
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   world_size ................... 4
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   zero_allow_untested_optimizer  True
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   zero_config .................. stage=2 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=200000000 use_multi_rank_bucket_allreduce=True allgather_partitions=True allgather_bucket_size=200000000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=None offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='none', nvme_path=None, buffer_count=4, pin_memory=False, pipeline=False, pipeline_read=False, pipeline_write=False, fast_init=False, ratio=1.0) sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   zero_enabled ................. True
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   zero_force_ds_cpu_optimizer .. True
+[2025-07-17 08:51:21,103] [INFO] [config.py:1000:print]   zero_optimization_stage ...... 2
+[2025-07-17 08:51:21,103] [INFO] [config.py:986:print_user_config]   json = {
+    "train_micro_batch_size_per_gpu": 16, 
+    "gradient_accumulation_steps": 2, 
+    "bf16": {
+        "enabled": true
+    }, 
+    "gradient_clipping": 1.0, 
+    "zero_optimization": {
+        "stage": 2, 
+        "offload_optimizer": {
+            "device": "none"
+        }, 
+        "contiguous_gradients": true, 
+        "overlap_comm": true, 
+        "reduce_scatter": true, 
+        "reduce_bucket_size": 2.000000e+08, 
+        "allgather_partitions": true, 
+        "allgather_bucket_size": 2.000000e+08
+    }, 
+    "zero_allow_untested_optimizer": true, 
+    "nccl": {
+        "timeout": 1.800000e+03
+    }, 
+    "steps_per_print": inf, 
+    "fp16": {
+        "enabled": false
+    }
+}
+epoch 1 iter 100 loss 154.5824 | batch_size 24 | samples 2400/21240 | elapsed 167.2s
+epoch 1 iter 200 loss 147.1859 | batch_size 24 | samples 4800/21240 | elapsed 319.4s
+epoch 1 iter 300 loss 229.3194 | batch_size 24 | samples 7200/21240 | elapsed 474.4s
+epoch 1 iter 400 loss 292.8827 | batch_size 24 | samples 9600/21240 | elapsed 632.2s
+epoch 1 iter 500 loss 89.6653 | batch_size 24 | samples 12000/21240 | elapsed 790.1s
+epoch 1 iter 600 loss 35.7623 | batch_size 24 | samples 14400/21240 | elapsed 946.9s
+epoch 1 iter 700 loss 33.8697 | batch_size 24 | samples 16800/21240 | elapsed 1103.3s
+epoch 1 iter 800 loss 54.0293 | batch_size 24 | samples 19200/21240 | elapsed 1258.2s
+[Epoch 1] New best val_loss=53.5056, saved to best_model.pth
+[2025-07-17T09:17:18.868947] epoch 1 train_loss 133.6588 val_loss 53.5056 elapsed 1557.8s
+Validation loss decreased (inf --> 53.505567).  Saving model ...
+epoch 2 iter 100 loss 142.3586 | batch_size 24 | samples 2400/21240 | elapsed 1779.7s
+epoch 2 iter 200 loss 31.2736 | batch_size 24 | samples 4800/21240 | elapsed 1934.8s
+epoch 2 iter 300 loss 60.0304 | batch_size 24 | samples 7200/21240 | elapsed 2091.2s
+epoch 2 iter 400 loss 50.9383 | batch_size 24 | samples 9600/21240 | elapsed 2246.3s
+epoch 2 iter 500 loss 44.3432 | batch_size 24 | samples 12000/21240 | elapsed 2402.5s
+epoch 2 iter 600 loss 62.6226 | batch_size 24 | samples 14400/21240 | elapsed 2559.2s
+epoch 2 iter 700 loss 29.3973 | batch_size 24 | samples 16800/21240 | elapsed 2715.2s
+epoch 2 iter 800 loss 57.3207 | batch_size 24 | samples 19200/21240 | elapsed 2871.7s
+[Epoch 2] New best val_loss=36.6075, saved to best_model.pth
+[2025-07-17T09:44:13.436362] epoch 2 train_loss 52.1574 val_loss 36.6075 elapsed 1555.4s
+Validation loss decreased (53.505567 --> 36.607546).  Saving model ...
+epoch 3 iter 100 loss 66.0792 | batch_size 24 | samples 2400/21240 | elapsed 3394.4s
+epoch 3 iter 200 loss 38.2062 | batch_size 24 | samples 4800/21240 | elapsed 3553.3s
+epoch 3 iter 300 loss 21.6776 | batch_size 24 | samples 7200/21240 | elapsed 3712.6s
+epoch 3 iter 400 loss 17.4340 | batch_size 24 | samples 9600/21240 | elapsed 3868.8s
+epoch 3 iter 500 loss 28.3562 | batch_size 24 | samples 12000/21240 | elapsed 4023.1s
+epoch 3 iter 600 loss 40.1795 | batch_size 24 | samples 14400/21240 | elapsed 4178.0s
+epoch 3 iter 700 loss 78.0149 | batch_size 24 | samples 16800/21240 | elapsed 4332.6s
+epoch 3 iter 800 loss 26.8243 | batch_size 24 | samples 19200/21240 | elapsed 4488.5s
+[Epoch 3] New best val_loss=35.3295, saved to best_model.pth
+[2025-07-17T10:11:11.167426] epoch 3 train_loss 47.1552 val_loss 35.3295 elapsed 1558.3s
+Validation loss decreased (36.607546 --> 35.329539).  Saving model ...
+epoch 4 iter 100 loss 43.2062 | batch_size 24 | samples 2400/21240 | elapsed 5011.2s
+epoch 4 iter 200 loss 70.0602 | batch_size 24 | samples 4800/21240 | elapsed 5166.0s
+epoch 4 iter 300 loss 49.4744 | batch_size 24 | samples 7200/21240 | elapsed 5321.7s
+epoch 4 iter 400 loss 26.2589 | batch_size 24 | samples 9600/21240 | elapsed 5476.9s
+epoch 4 iter 500 loss 22.6430 | batch_size 24 | samples 12000/21240 | elapsed 5632.0s
+epoch 4 iter 600 loss 57.2912 | batch_size 24 | samples 14400/21240 | elapsed 5785.8s
+epoch 4 iter 700 loss 65.4089 | batch_size 24 | samples 16800/21240 | elapsed 5941.4s
+epoch 4 iter 800 loss 47.1493 | batch_size 24 | samples 19200/21240 | elapsed 6097.4s
+[Epoch 4] New best val_loss=34.7827, saved to best_model.pth
+[2025-07-17T10:37:55.875749] epoch 4 train_loss 45.1595 val_loss 34.7827 elapsed 1545.4s
+Validation loss decreased (35.329539 --> 34.782713).  Saving model ...
+epoch 5 iter 100 loss 40.9436 | batch_size 24 | samples 2400/21240 | elapsed 6617.1s
+epoch 5 iter 200 loss 40.5579 | batch_size 24 | samples 4800/21240 | elapsed 6772.8s
+epoch 5 iter 300 loss 30.1739 | batch_size 24 | samples 7200/21240 | elapsed 6927.2s
+epoch 5 iter 400 loss 39.2347 | batch_size 24 | samples 9600/21240 | elapsed 7081.5s
+epoch 5 iter 500 loss 29.1481 | batch_size 24 | samples 12000/21240 | elapsed 7236.6s
+epoch 5 iter 600 loss 36.6815 | batch_size 24 | samples 14400/21240 | elapsed 7392.4s
+epoch 5 iter 700 loss 58.2259 | batch_size 24 | samples 16800/21240 | elapsed 7548.6s
+epoch 5 iter 800 loss 55.3929 | batch_size 24 | samples 19200/21240 | elapsed 7705.6s
+[Epoch 5] New best val_loss=25.4362, saved to best_model.pth
+[2025-07-17T11:04:48.091350] epoch 5 train_loss 41.1847 val_loss 25.4362 elapsed 1552.5s
+Validation loss decreased (34.782713 --> 25.436158).  Saving model ...
+epoch 6 iter 100 loss 37.2368 | batch_size 24 | samples 2400/21240 | elapsed 8229.5s
+epoch 6 iter 200 loss 63.4989 | batch_size 24 | samples 4800/21240 | elapsed 8385.6s
+epoch 6 iter 300 loss 37.3046 | batch_size 24 | samples 7200/21240 | elapsed 8541.1s
+epoch 6 iter 400 loss 46.2886 | batch_size 24 | samples 9600/21240 | elapsed 8697.6s
+epoch 6 iter 500 loss 28.6344 | batch_size 24 | samples 12000/21240 | elapsed 8853.4s
+epoch 6 iter 600 loss 55.4162 | batch_size 24 | samples 14400/21240 | elapsed 9008.2s
+epoch 6 iter 700 loss 43.0298 | batch_size 24 | samples 16800/21240 | elapsed 9164.2s
+epoch 6 iter 800 loss 66.7661 | batch_size 24 | samples 19200/21240 | elapsed 9322.1s
+[Epoch 6] New best val_loss=24.9981, saved to best_model.pth
+[2025-07-17T11:31:48.004274] epoch 6 train_loss 38.0738 val_loss 24.9981 elapsed 1560.3s
+Validation loss decreased (25.436158 --> 24.998082).  Saving model ...
+epoch 7 iter 100 loss 35.7574 | batch_size 24 | samples 2400/21240 | elapsed 9847.7s
+epoch 7 iter 200 loss 64.1728 | batch_size 24 | samples 4800/21240 | elapsed 10002.1s
+epoch 7 iter 300 loss 47.6804 | batch_size 24 | samples 7200/21240 | elapsed 10155.9s
+epoch 7 iter 400 loss 27.5514 | batch_size 24 | samples 9600/21240 | elapsed 10311.3s
+epoch 7 iter 500 loss 25.1506 | batch_size 24 | samples 12000/21240 | elapsed 10464.8s
+epoch 7 iter 600 loss 14.3882 | batch_size 24 | samples 14400/21240 | elapsed 10621.0s
+epoch 7 iter 700 loss 61.3792 | batch_size 24 | samples 16800/21240 | elapsed 10778.4s
+epoch 7 iter 800 loss 24.7917 | batch_size 24 | samples 19200/21240 | elapsed 10934.2s
+[Epoch 7] New best val_loss=23.8403, saved to best_model.pth
+[2025-07-17T11:58:37.071949] epoch 7 train_loss 36.7741 val_loss 23.8403 elapsed 1548.9s
+Validation loss decreased (24.998082 --> 23.840282).  Saving model ...
+epoch 8 iter 100 loss 22.7336 | batch_size 24 | samples 2400/21240 | elapsed 11456.9s
+epoch 8 iter 200 loss 33.3016 | batch_size 24 | samples 4800/21240 | elapsed 11611.2s
+epoch 8 iter 300 loss 44.4819 | batch_size 24 | samples 7200/21240 | elapsed 11765.6s
+epoch 8 iter 400 loss 13.4298 | batch_size 24 | samples 9600/21240 | elapsed 11920.2s
+epoch 8 iter 500 loss 78.6296 | batch_size 24 | samples 12000/21240 | elapsed 12076.2s
+epoch 8 iter 600 loss 33.9773 | batch_size 24 | samples 14400/21240 | elapsed 12232.4s
+epoch 8 iter 700 loss 27.3424 | batch_size 24 | samples 16800/21240 | elapsed 12387.5s
+epoch 8 iter 800 loss 39.0686 | batch_size 24 | samples 19200/21240 | elapsed 12541.9s
+[Epoch 8] New best val_loss=21.1241, saved to best_model.pth
+[2025-07-17T12:25:22.724211] epoch 8 train_loss 35.8915 val_loss 21.1241 elapsed 1546.1s
+Validation loss decreased (23.840282 --> 21.124102).  Saving model ...
+epoch 9 iter 100 loss 43.1556 | batch_size 24 | samples 2400/21240 | elapsed 13062.5s
+epoch 9 iter 200 loss 39.2817 | batch_size 24 | samples 4800/21240 | elapsed 13219.1s
+epoch 9 iter 300 loss 52.4274 | batch_size 24 | samples 7200/21240 | elapsed 13377.1s
+epoch 9 iter 400 loss 29.1445 | batch_size 24 | samples 9600/21240 | elapsed 13534.0s
+epoch 9 iter 500 loss 30.8555 | batch_size 24 | samples 12000/21240 | elapsed 13690.0s
+epoch 9 iter 600 loss 38.5780 | batch_size 24 | samples 14400/21240 | elapsed 13845.3s
+epoch 9 iter 700 loss 46.1186 | batch_size 24 | samples 16800/21240 | elapsed 13999.3s
+epoch 9 iter 800 loss 32.5288 | batch_size 24 | samples 19200/21240 | elapsed 14154.5s
+[2025-07-17T12:51:56.808252] epoch 9 train_loss 36.2392 val_loss 22.8904 elapsed 1534.2s
+EarlyStopping counter: 1 out of 5
+epoch 10 iter 100 loss 55.0223 | batch_size 24 | samples 2400/21240 | elapsed 14637.9s
+epoch 10 iter 200 loss 50.6858 | batch_size 24 | samples 4800/21240 | elapsed 14795.2s
+epoch 10 iter 300 loss 41.2222 | batch_size 24 | samples 7200/21240 | elapsed 14951.2s
+epoch 10 iter 400 loss 27.7373 | batch_size 24 | samples 9600/21240 | elapsed 15106.4s
+epoch 10 iter 500 loss 40.8539 | batch_size 24 | samples 12000/21240 | elapsed 15262.5s
+epoch 10 iter 600 loss 44.6415 | batch_size 24 | samples 14400/21240 | elapsed 15418.0s
+epoch 10 iter 700 loss 35.4687 | batch_size 24 | samples 16800/21240 | elapsed 15573.4s
+epoch 10 iter 800 loss 33.2923 | batch_size 24 | samples 19200/21240 | elapsed 15728.2s
+[Epoch 10] New best val_loss=18.5692, saved to best_model.pth
+[2025-07-17T13:18:26.431175] epoch 10 train_loss 34.7920 val_loss 18.5692 elapsed 1548.2s
+Validation loss decreased (21.124102 --> 18.569156).  Saving model ...
+epoch 11 iter 100 loss 35.8695 | batch_size 24 | samples 2400/21240 | elapsed 16247.7s
+epoch 11 iter 200 loss 25.0835 | batch_size 24 | samples 4800/21240 | elapsed 16404.3s
+epoch 11 iter 300 loss 29.7153 | batch_size 24 | samples 7200/21240 | elapsed 16559.5s
+epoch 11 iter 400 loss 36.2013 | batch_size 24 | samples 9600/21240 | elapsed 16713.7s
+epoch 11 iter 500 loss 25.0438 | batch_size 24 | samples 12000/21240 | elapsed 16869.2s
+epoch 11 iter 600 loss 30.3880 | batch_size 24 | samples 14400/21240 | elapsed 17023.1s
+epoch 11 iter 700 loss 31.6141 | batch_size 24 | samples 16800/21240 | elapsed 17177.9s
+epoch 11 iter 800 loss 46.4903 | batch_size 24 | samples 19200/21240 | elapsed 17334.6s
+[Epoch 11] New best val_loss=16.3959, saved to best_model.pth
+[2025-07-17T13:45:14.678350] epoch 11 train_loss 33.1702 val_loss 16.3959 elapsed 1547.9s
+Validation loss decreased (18.569156 --> 16.395870).  Saving model ...
+epoch 12 iter 100 loss 22.4474 | batch_size 24 | samples 2400/21240 | elapsed 17854.1s
+epoch 12 iter 200 loss 55.5649 | batch_size 24 | samples 4800/21240 | elapsed 18011.0s
+epoch 12 iter 300 loss 19.7385 | batch_size 24 | samples 7200/21240 | elapsed 18167.9s
+epoch 12 iter 400 loss 33.1891 | batch_size 24 | samples 9600/21240 | elapsed 18322.3s
+epoch 12 iter 500 loss 35.8537 | batch_size 24 | samples 12000/21240 | elapsed 18477.4s
+epoch 12 iter 600 loss 28.8331 | batch_size 24 | samples 14400/21240 | elapsed 18631.2s
+epoch 12 iter 700 loss 38.1440 | batch_size 24 | samples 16800/21240 | elapsed 18785.9s
+epoch 12 iter 800 loss 32.2041 | batch_size 24 | samples 19200/21240 | elapsed 18941.8s
+[Epoch 12] New best val_loss=15.1908, saved to best_model.pth
+[2025-07-17T14:12:04.443937] epoch 12 train_loss 32.6729 val_loss 15.1908 elapsed 1549.5s
+Validation loss decreased (16.395870 --> 15.190777).  Saving model ...
+epoch 13 iter 100 loss 41.7909 | batch_size 24 | samples 2400/21240 | elapsed 19463.7s
+epoch 13 iter 200 loss 37.5095 | batch_size 24 | samples 4800/21240 | elapsed 19618.6s
+epoch 13 iter 300 loss 27.8534 | batch_size 24 | samples 7200/21240 | elapsed 19772.4s
+epoch 13 iter 400 loss 71.1550 | batch_size 24 | samples 9600/21240 | elapsed 19926.2s
+epoch 13 iter 500 loss 57.2124 | batch_size 24 | samples 12000/21240 | elapsed 20079.8s
+epoch 13 iter 600 loss 56.4239 | batch_size 24 | samples 14400/21240 | elapsed 20237.4s
+epoch 13 iter 700 loss 25.6694 | batch_size 24 | samples 16800/21240 | elapsed 20394.4s
+epoch 13 iter 800 loss 17.1602 | batch_size 24 | samples 19200/21240 | elapsed 20551.1s
+[2025-07-17T14:38:27.903133] epoch 13 train_loss 32.1362 val_loss 16.9647 elapsed 1523.7s
+EarlyStopping counter: 1 out of 5
+epoch 14 iter 100 loss 29.6653 | batch_size 24 | samples 2400/21240 | elapsed 21027.0s
+epoch 14 iter 200 loss 52.6544 | batch_size 24 | samples 4800/21240 | elapsed 21183.4s
+epoch 14 iter 300 loss 51.3023 | batch_size 24 | samples 7200/21240 | elapsed 21339.6s
+epoch 14 iter 400 loss 24.0903 | batch_size 24 | samples 9600/21240 | elapsed 21495.2s
+epoch 14 iter 500 loss 51.1750 | batch_size 24 | samples 12000/21240 | elapsed 21652.3s
+epoch 14 iter 600 loss 26.5741 | batch_size 24 | samples 14400/21240 | elapsed 21808.9s
+epoch 14 iter 700 loss 30.7202 | batch_size 24 | samples 16800/21240 | elapsed 21963.7s
+epoch 14 iter 800 loss 47.4802 | batch_size 24 | samples 19200/21240 | elapsed 22118.3s
+[Epoch 14] New best val_loss=14.4067, saved to best_model.pth
+[2025-07-17T15:04:57.510932] epoch 14 train_loss 30.7978 val_loss 14.4067 elapsed 1548.3s
+Validation loss decreased (15.190777 --> 14.406711).  Saving model ...
+epoch 15 iter 100 loss 23.1887 | batch_size 24 | samples 2400/21240 | elapsed 22634.4s
+epoch 15 iter 200 loss 33.6589 | batch_size 24 | samples 4800/21240 | elapsed 22789.4s
+epoch 15 iter 300 loss 30.2732 | batch_size 24 | samples 7200/21240 | elapsed 22944.1s
+epoch 15 iter 400 loss 31.7330 | batch_size 24 | samples 9600/21240 | elapsed 23101.3s
+epoch 15 iter 500 loss 24.1774 | batch_size 24 | samples 12000/21240 | elapsed 23257.4s
+epoch 15 iter 600 loss 26.4865 | batch_size 24 | samples 14400/21240 | elapsed 23413.4s
+epoch 15 iter 700 loss 23.1150 | batch_size 24 | samples 16800/21240 | elapsed 23568.3s
+epoch 15 iter 800 loss 36.1901 | batch_size 24 | samples 19200/21240 | elapsed 23723.6s
+[Epoch 15] New best val_loss=13.3208, saved to best_model.pth
+[2025-07-17T15:31:50.030311] epoch 15 train_loss 29.6721 val_loss 13.3208 elapsed 1552.9s
+Validation loss decreased (14.406711 --> 13.320776).  Saving model ...
+epoch 16 iter 100 loss 51.2320 | batch_size 24 | samples 2400/21240 | elapsed 24249.4s
+epoch 16 iter 200 loss 38.7731 | batch_size 24 | samples 4800/21240 | elapsed 24406.1s
+epoch 16 iter 300 loss 49.2173 | batch_size 24 | samples 7200/21240 | elapsed 24563.6s
+epoch 16 iter 400 loss 33.7878 | batch_size 24 | samples 9600/21240 | elapsed 24719.7s
+epoch 16 iter 500 loss 25.0326 | batch_size 24 | samples 12000/21240 | elapsed 24875.1s
+epoch 16 iter 600 loss 25.6643 | batch_size 24 | samples 14400/21240 | elapsed 25030.9s
+epoch 16 iter 700 loss 14.5780 | batch_size 24 | samples 16800/21240 | elapsed 25185.2s
+epoch 16 iter 800 loss 17.5719 | batch_size 24 | samples 19200/21240 | elapsed 25340.1s
+[Epoch 16] New best val_loss=12.9963, saved to best_model.pth
+[2025-07-17T15:58:40.895588] epoch 16 train_loss 28.9820 val_loss 12.9963 elapsed 1551.4s
+Validation loss decreased (13.320776 --> 12.996267).  Saving model ...
+epoch 17 iter 100 loss 33.1567 | batch_size 24 | samples 2400/21240 | elapsed 25860.2s
+epoch 17 iter 200 loss 18.6748 | batch_size 24 | samples 4800/21240 | elapsed 26014.4s
+epoch 17 iter 300 loss 17.7827 | batch_size 24 | samples 7200/21240 | elapsed 26167.8s
+epoch 17 iter 400 loss 42.2824 | batch_size 24 | samples 9600/21240 | elapsed 26321.4s
+epoch 17 iter 500 loss 32.7338 | batch_size 24 | samples 12000/21240 | elapsed 26475.7s
+epoch 17 iter 600 loss 41.0241 | batch_size 24 | samples 14400/21240 | elapsed 26629.4s
+epoch 17 iter 700 loss 23.8322 | batch_size 24 | samples 16800/21240 | elapsed 26785.3s
+epoch 17 iter 800 loss 30.4000 | batch_size 24 | samples 19200/21240 | elapsed 26940.0s
+[Epoch 17] New best val_loss=12.8891, saved to best_model.pth
+[2025-07-17T16:25:20.232670] epoch 17 train_loss 28.6367 val_loss 12.8891 elapsed 1538.6s
+Validation loss decreased (12.996267 --> 12.889092).  Saving model ...
+epoch 18 iter 100 loss 31.6661 | batch_size 24 | samples 2400/21240 | elapsed 27459.4s
+epoch 18 iter 200 loss 36.7960 | batch_size 24 | samples 4800/21240 | elapsed 27614.3s
+epoch 18 iter 300 loss 30.1798 | batch_size 24 | samples 7200/21240 | elapsed 27769.5s
+epoch 18 iter 400 loss 28.9591 | batch_size 24 | samples 9600/21240 | elapsed 27923.8s
+epoch 18 iter 500 loss 17.8747 | batch_size 24 | samples 12000/21240 | elapsed 28078.1s
+epoch 18 iter 600 loss 27.1772 | batch_size 24 | samples 14400/21240 | elapsed 28231.5s
+epoch 18 iter 700 loss 31.8381 | batch_size 24 | samples 16800/21240 | elapsed 28384.1s
+epoch 18 iter 800 loss 30.5482 | batch_size 24 | samples 19200/21240 | elapsed 28538.3s
+[Epoch 18] New best val_loss=12.5949, saved to best_model.pth
+[2025-07-17T16:51:55.885942] epoch 18 train_loss 28.5613 val_loss 12.5949 elapsed 1536.1s
+Validation loss decreased (12.889092 --> 12.594899).  Saving model ...
+epoch 19 iter 100 loss 23.6607 | batch_size 24 | samples 2400/21240 | elapsed 29055.6s
+epoch 19 iter 200 loss 26.2637 | batch_size 24 | samples 4800/21240 | elapsed 29210.0s
+epoch 19 iter 300 loss 31.3465 | batch_size 24 | samples 7200/21240 | elapsed 29365.9s
+epoch 19 iter 400 loss 22.8520 | batch_size 24 | samples 9600/21240 | elapsed 29520.8s
+epoch 19 iter 500 loss 28.3295 | batch_size 24 | samples 12000/21240 | elapsed 29675.6s
+epoch 19 iter 600 loss 6.7448 | batch_size 24 | samples 14400/21240 | elapsed 29829.8s
+epoch 19 iter 700 loss 51.2300 | batch_size 24 | samples 16800/21240 | elapsed 29985.4s
+epoch 19 iter 800 loss 36.4286 | batch_size 24 | samples 19200/21240 | elapsed 30140.5s
+[2025-07-17T17:18:18.011336] epoch 19 train_loss 30.5210 val_loss 16.3337 elapsed 1522.1s
+EarlyStopping counter: 1 out of 5
+epoch 20 iter 100 loss 59.0629 | batch_size 24 | samples 2400/21240 | elapsed 30619.7s
+epoch 20 iter 200 loss 17.5753 | batch_size 24 | samples 4800/21240 | elapsed 30775.4s
+epoch 20 iter 300 loss 35.1804 | batch_size 24 | samples 7200/21240 | elapsed 30929.7s
+epoch 20 iter 400 loss 43.7992 | batch_size 24 | samples 9600/21240 | elapsed 31085.7s
+epoch 20 iter 500 loss 15.0355 | batch_size 24 | samples 12000/21240 | elapsed 31243.5s
+epoch 20 iter 600 loss 37.6025 | batch_size 24 | samples 14400/21240 | elapsed 31399.7s
+epoch 20 iter 700 loss 37.0889 | batch_size 24 | samples 16800/21240 | elapsed 31557.6s
+epoch 20 iter 800 loss 12.7039 | batch_size 24 | samples 19200/21240 | elapsed 31713.4s
+[2025-07-17T17:44:36.587056] epoch 20 train_loss 30.0377 val_loss 14.4555 elapsed 1537.6s
+[2025-07-17 17:44:46,030] [INFO] [launch.py:351:main] Process 860070 exits successfully.
+[2025-07-17 17:44:47,032] [INFO] [launch.py:351:main] Process 860071 exits successfully.
+[2025-07-17 17:44:47,032] [INFO] [launch.py:351:main] Process 860069 exits successfully.
+EarlyStopping counter: 2 out of 5
+[2025-07-17 17:45:19,068] [INFO] [launch.py:351:main] Process 860068 exits successfully.

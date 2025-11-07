@@ -1,0 +1,75 @@
+master_port: 20656
+[2025-07-13 10:50:38,558] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[2025-07-13 10:50:40,702] [WARNING] [runner.py:202:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+Detected CUDA_VISIBLE_DEVICES=0,1,2,3: setting --include=localhost:0,1,2,3
+[2025-07-13 10:50:40,703] [INFO] [runner.py:568:main] cmd = /home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMSwgMiwgM119 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None /home/liuyanjiao/trajectory_predict/test_metrics.py --checkpoint_path checkpoints/Exp_Mistral_map_20250712_192716/best_model.pth --use_map --llm_model Mistral --llm_model_path ./models/Mistral-7B-Instruct-v0.2/
+[2025-07-13 10:50:43,300] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[2025-07-13 10:50:44,930] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0, 1, 2, 3]}
+[2025-07-13 10:50:44,930] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=4, node_rank=0
+[2025-07-13 10:50:44,930] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1, 2, 3]})
+[2025-07-13 10:50:44,930] [INFO] [launch.py:164:main] dist_world_size=4
+[2025-07-13 10:50:44,930] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0,1,2,3
+[2025-07-13 10:50:44,931] [INFO] [launch.py:256:main] process 3880608 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_predict/test_metrics.py', '--local_rank=0', '--checkpoint_path', 'checkpoints/Exp_Mistral_map_20250712_192716/best_model.pth', '--use_map', '--llm_model', 'Mistral', '--llm_model_path', './models/Mistral-7B-Instruct-v0.2/']
+[2025-07-13 10:50:44,934] [INFO] [launch.py:256:main] process 3880609 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_predict/test_metrics.py', '--local_rank=1', '--checkpoint_path', 'checkpoints/Exp_Mistral_map_20250712_192716/best_model.pth', '--use_map', '--llm_model', 'Mistral', '--llm_model_path', './models/Mistral-7B-Instruct-v0.2/']
+[2025-07-13 10:50:44,944] [INFO] [launch.py:256:main] process 3880610 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_predict/test_metrics.py', '--local_rank=2', '--checkpoint_path', 'checkpoints/Exp_Mistral_map_20250712_192716/best_model.pth', '--use_map', '--llm_model', 'Mistral', '--llm_model_path', './models/Mistral-7B-Instruct-v0.2/']
+[2025-07-13 10:50:44,964] [INFO] [launch.py:256:main] process 3880615 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_predict/test_metrics.py', '--local_rank=3', '--checkpoint_path', 'checkpoints/Exp_Mistral_map_20250712_192716/best_model.pth', '--use_map', '--llm_model', 'Mistral', '--llm_model_path', './models/Mistral-7B-Instruct-v0.2/']
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+LLM Initialization Process (1/2): loading Mistral ...... 
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+LLM Initialization Process (1/2): loading Mistral ...... 
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+LLM Initialization Process (1/2): loading Mistral ...... 
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+LLM Initialization Process (1/2): loading Mistral ...... 
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:34<01:08, 34.41s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:34<01:08, 34.41s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:34<01:08, 34.48s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:34<01:09, 34.53s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [01:00<00:29, 29.63s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [01:00<00:29, 29.63s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [01:00<00:29, 29.67s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [01:00<00:29, 29.68s/it]Loading checkpoint shards: 100%|██████████| 3/3 [01:23<00:00, 26.72s/it]Loading checkpoint shards: 100%|██████████| 3/3 [01:23<00:00, 28.00s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [01:23<00:00, 26.73s/it]Loading checkpoint shards: 100%|██████████| 3/3 [01:23<00:00, 27.99s/it]
+LLM Initialization Process (2/3): Mistral has been loaded successfully!
+LLM Initialization Process (2/2): loading the tokenizer for Mistral ...... 
+LLM Initialization Process (2/3): Mistral has been loaded successfully!
+LLM Initialization Process (2/2): loading the tokenizer for Mistral ...... 
+Loading checkpoint shards: 100%|██████████| 3/3 [01:24<00:00, 26.74s/it]Loading checkpoint shards: 100%|██████████| 3/3 [01:24<00:00, 28.02s/it]
+LLM Initialization Process (2/3): Mistral has been loaded successfully!
+LLM Initialization Process (2/2): loading the tokenizer for Mistral ...... 
+Loading checkpoint shards: 100%|██████████| 3/3 [01:24<00:00, 26.81s/it]Loading checkpoint shards: 100%|██████████| 3/3 [01:24<00:00, 28.05s/it]
+LLM Initialization Process (2/3): Mistral has been loaded successfully!
+LLM Initialization Process (2/2): loading the tokenizer for Mistral ...... 
+LLM Initialization Process (2/2): the tokenizer for Mistral has been loaded successfully!
+LLM Initialization Process (2/2): the tokenizer for Mistral has been loaded successfully!
+LLM Initialization Process (2/2): the tokenizer for Mistral has been loaded successfully!
+LLM Initialization Process (2/2): the tokenizer for Mistral has been loaded successfully!
+===========================================
+Total samples evaluated: 18720
+MAE (all steps mean): 3.000848
+FDE   mean: 6.686073, std: 6.877936
+2s    mean: 0.824969, std: 1.068556
+4s    mean: 1.765625, std: 2.440995
+6s    mean: 3.000848, std: 4.269817
+-------------------------------------------
+Computational Efficiency: Total 655.548s, Per-sample 0.035019s
+Acceleration (L2): mean 0.311247, max 4.250000
+Curvature continuity: mean 5.171664, max 268.205017
+Miss Rate (last step >2m): 0.658440
+===========================================
+[2025-07-13 11:04:35,795] [INFO] [launch.py:351:main] Process 3880609 exits successfully.
+[2025-07-13 11:04:36,796] [INFO] [launch.py:351:main] Process 3880615 exits successfully.
+[2025-07-13 11:04:36,797] [INFO] [launch.py:351:main] Process 3880610 exits successfully.
+[2025-07-13 11:04:36,797] [INFO] [launch.py:351:main] Process 3880608 exits successfully.

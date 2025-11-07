@@ -1,0 +1,75 @@
+master_port: 22981
+[2025-07-13 21:22:13,409] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[2025-07-13 21:22:21,690] [WARNING] [runner.py:202:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+Detected CUDA_VISIBLE_DEVICES=0,1,2,3: setting --include=localhost:0,1,2,3
+[2025-07-13 21:22:21,690] [INFO] [runner.py:568:main] cmd = /home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMSwgMiwgM119 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None /home/liuyanjiao/trajectory_predict/test_metrics.py --checkpoint_path checkpoints/Exp_WizardLM_map_20250713_103804/best_model.pth --use_map --llm_model WizardLM --llm_model_path ./models/WizardLM-7B-V1.0/
+[2025-07-13 21:22:24,761] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[2025-07-13 21:22:26,453] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0, 1, 2, 3]}
+[2025-07-13 21:22:26,453] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=4, node_rank=0
+[2025-07-13 21:22:26,453] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1, 2, 3]})
+[2025-07-13 21:22:26,453] [INFO] [launch.py:164:main] dist_world_size=4
+[2025-07-13 21:22:26,453] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0,1,2,3
+[2025-07-13 21:22:26,454] [INFO] [launch.py:256:main] process 3282011 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_predict/test_metrics.py', '--local_rank=0', '--checkpoint_path', 'checkpoints/Exp_WizardLM_map_20250713_103804/best_model.pth', '--use_map', '--llm_model', 'WizardLM', '--llm_model_path', './models/WizardLM-7B-V1.0/']
+[2025-07-13 21:22:26,459] [INFO] [launch.py:256:main] process 3282012 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_predict/test_metrics.py', '--local_rank=1', '--checkpoint_path', 'checkpoints/Exp_WizardLM_map_20250713_103804/best_model.pth', '--use_map', '--llm_model', 'WizardLM', '--llm_model_path', './models/WizardLM-7B-V1.0/']
+[2025-07-13 21:22:26,460] [INFO] [launch.py:256:main] process 3282013 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_predict/test_metrics.py', '--local_rank=2', '--checkpoint_path', 'checkpoints/Exp_WizardLM_map_20250713_103804/best_model.pth', '--use_map', '--llm_model', 'WizardLM', '--llm_model_path', './models/WizardLM-7B-V1.0/']
+[2025-07-13 21:22:26,464] [INFO] [launch.py:256:main] process 3282014 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_predict/test_metrics.py', '--local_rank=3', '--checkpoint_path', 'checkpoints/Exp_WizardLM_map_20250713_103804/best_model.pth', '--use_map', '--llm_model', 'WizardLM', '--llm_model_path', './models/WizardLM-7B-V1.0/']
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+LLM Initialization Process (1/2): loading WizardLM ...... 
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+LLM Initialization Process (1/2): loading WizardLM ...... 
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+LLM Initialization Process (1/2): loading WizardLM ...... 
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+LLM Initialization Process (1/2): loading WizardLM ...... 
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:51<01:42, 51.24s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:53<01:46, 53.21s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:51<01:42, 51.50s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:51<01:43, 51.62s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [01:46<00:53, 53.43s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [01:48<00:54, 54.24s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [01:46<00:53, 53.53s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [01:46<00:53, 53.58s/it]Loading checkpoint shards: 100%|██████████| 3/3 [02:25<00:00, 46.95s/it]Loading checkpoint shards: 100%|██████████| 3/3 [02:25<00:00, 48.52s/it]
+LLM Initialization Process (2/3): WizardLM has been loaded successfully!
+LLM Initialization Process (2/2): loading the tokenizer for WizardLM ...... 
+Loading checkpoint shards: 100%|██████████| 3/3 [02:25<00:00, 47.07s/it]Loading checkpoint shards: 100%|██████████| 3/3 [02:25<00:00, 48.63s/it]
+LLM Initialization Process (2/3): WizardLM has been loaded successfully!
+LLM Initialization Process (2/2): loading the tokenizer for WizardLM ...... 
+Loading checkpoint shards: 100%|██████████| 3/3 [02:25<00:00, 47.12s/it]Loading checkpoint shards: 100%|██████████| 3/3 [02:25<00:00, 48.60s/it]
+LLM Initialization Process (2/2): the tokenizer for WizardLM has been loaded successfully!
+Loading checkpoint shards: 100%|██████████| 3/3 [02:27<00:00, 47.49s/it]Loading checkpoint shards: 100%|██████████| 3/3 [02:27<00:00, 49.21s/it]
+LLM Initialization Process (2/3): WizardLM has been loaded successfully!
+LLM Initialization Process (2/2): loading the tokenizer for WizardLM ...... 
+LLM Initialization Process (2/3): WizardLM has been loaded successfully!
+LLM Initialization Process (2/2): loading the tokenizer for WizardLM ...... 
+LLM Initialization Process (2/2): the tokenizer for WizardLM has been loaded successfully!
+LLM Initialization Process (2/2): the tokenizer for WizardLM has been loaded successfully!
+LLM Initialization Process (2/2): the tokenizer for WizardLM has been loaded successfully!
+===========================================
+Total samples evaluated: 18720
+MAE (all steps mean): 10.403779
+FDE   mean: 20.815651, std: 21.110079
+2s    mean: 3.151397, std: 4.213520
+4s    mean: 6.666996, std: 9.148817
+6s    mean: 10.403779, std: 14.091582
+-------------------------------------------
+Computational Efficiency: Total 646.857s, Per-sample 0.034554s
+Acceleration (L2): mean 0.099683, max 1.161543
+Curvature continuity: mean 46.907707, max 410.122375
+Miss Rate (last step >2m): 0.683868
+===========================================
+[2025-07-13 21:37:45,494] [INFO] [launch.py:351:main] Process 3282013 exits successfully.
+[2025-07-13 21:37:46,496] [INFO] [launch.py:351:main] Process 3282014 exits successfully.
+[2025-07-13 21:37:46,496] [INFO] [launch.py:351:main] Process 3282011 exits successfully.
+[2025-07-13 21:37:46,496] [INFO] [launch.py:351:main] Process 3282012 exits successfully.
