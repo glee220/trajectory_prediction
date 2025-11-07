@@ -1,0 +1,75 @@
+master_port: 25251
+[2025-07-14 09:09:37,684] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[2025-07-14 09:09:40,374] [WARNING] [runner.py:202:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+Detected CUDA_VISIBLE_DEVICES=0,1,2,3: setting --include=localhost:0,1,2,3
+[2025-07-14 09:09:40,374] [INFO] [runner.py:568:main] cmd = /home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMSwgMiwgM119 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None /home/liuyanjiao/trajectory_predict/test_metrics.py --checkpoint_path checkpoints/Exp_llama3__map_train_20250713_165428/best_model.pth --llm_model LLAMA3 --llm_model_path ./models/Meta-Llama-3-8B-Instruct/ --use_map
+[2025-07-14 09:09:43,632] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[2025-07-14 09:09:45,351] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0, 1, 2, 3]}
+[2025-07-14 09:09:45,351] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=4, node_rank=0
+[2025-07-14 09:09:45,351] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1, 2, 3]})
+[2025-07-14 09:09:45,351] [INFO] [launch.py:164:main] dist_world_size=4
+[2025-07-14 09:09:45,351] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0,1,2,3
+[2025-07-14 09:09:45,353] [INFO] [launch.py:256:main] process 2125336 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_predict/test_metrics.py', '--local_rank=0', '--checkpoint_path', 'checkpoints/Exp_llama3__map_train_20250713_165428/best_model.pth', '--llm_model', 'LLAMA3', '--llm_model_path', './models/Meta-Llama-3-8B-Instruct/', '--use_map']
+[2025-07-14 09:09:45,360] [INFO] [launch.py:256:main] process 2125337 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_predict/test_metrics.py', '--local_rank=1', '--checkpoint_path', 'checkpoints/Exp_llama3__map_train_20250713_165428/best_model.pth', '--llm_model', 'LLAMA3', '--llm_model_path', './models/Meta-Llama-3-8B-Instruct/', '--use_map']
+[2025-07-14 09:09:45,361] [INFO] [launch.py:256:main] process 2125338 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_predict/test_metrics.py', '--local_rank=2', '--checkpoint_path', 'checkpoints/Exp_llama3__map_train_20250713_165428/best_model.pth', '--llm_model', 'LLAMA3', '--llm_model_path', './models/Meta-Llama-3-8B-Instruct/', '--use_map']
+[2025-07-14 09:09:45,365] [INFO] [launch.py:256:main] process 2125339 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_predict/test_metrics.py', '--local_rank=3', '--checkpoint_path', 'checkpoints/Exp_llama3__map_train_20250713_165428/best_model.pth', '--llm_model', 'LLAMA3', '--llm_model_path', './models/Meta-Llama-3-8B-Instruct/', '--use_map']
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+LLM Initialization Process (1/2): loading Meta-Llama-3-8B-Instruct ...... 
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+LLM Initialization Process (1/2): loading Meta-Llama-3-8B-Instruct ...... 
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+LLM Initialization Process (1/2): loading Meta-Llama-3-8B-Instruct ...... 
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+LLM Initialization Process (1/2): loading Meta-Llama-3-8B-Instruct ...... 
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:22<01:08, 22.77s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:26<01:18, 26.02s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:16<00:49, 16.62s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:21<01:03, 21.30s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:48<00:50, 25.02s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:44<00:46, 23.15s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:53<00:54, 27.08s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:50<00:51, 25.82s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [01:07<00:23, 23.37s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [01:18<00:26, 26.20s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [01:16<00:25, 25.66s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [01:14<00:25, 25.30s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:12<00:00, 15.80s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:12<00:00, 18.04s/it]
+LLM Initialization Process (2/2): Meta-Llama-3-8B-Instruct has been loaded successfully!
+LLM Initialization Process (1/2): loading the tokenizer for Meta-Llama-3-8B-Instruct ...... 
+Loading checkpoint shards: 100%|██████████| 4/4 [01:18<00:00, 16.46s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:18<00:00, 19.64s/it]
+LLM Initialization Process (2/2): Meta-Llama-3-8B-Instruct has been loaded successfully!
+LLM Initialization Process (1/2): loading the tokenizer for Meta-Llama-3-8B-Instruct ...... 
+Loading checkpoint shards: 100%|██████████| 4/4 [01:21<00:00, 16.97s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:21<00:00, 20.45s/it]
+LLM Initialization Process (2/2): Meta-Llama-3-8B-Instruct has been loaded successfully!
+LLM Initialization Process (1/2): loading the tokenizer for Meta-Llama-3-8B-Instruct ...... 
+Loading checkpoint shards: 100%|██████████| 4/4 [01:17<00:00, 16.30s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:17<00:00, 19.26s/it]
+LLM Initialization Process (2/2): Meta-Llama-3-8B-Instruct has been loaded successfully!
+LLM Initialization Process (1/2): loading the tokenizer for Meta-Llama-3-8B-Instruct ...... 
+LLM Initialization Process (2/2): the tokenizer for Meta-Llama-3-8B-Instruct has been loaded successfully!
+LLM Initialization Process (2/2): the tokenizer for Meta-Llama-3-8B-Instruct has been loaded successfully!
+LLM Initialization Process (2/2): the tokenizer for Meta-Llama-3-8B-Instruct has been loaded successfully!
+LLM Initialization Process (2/2): the tokenizer for Meta-Llama-3-8B-Instruct has been loaded successfully!
+===========================================
+Total samples evaluated: 18720
+MAE (all steps mean): 2.919947
+FDE   mean: 6.562703, std: 6.801893
+2s    mean: 0.789136, std: 1.038361
+4s    mean: 1.703519, std: 2.384547
+6s    mean: 2.919947, std: 4.202178
+-------------------------------------------
+Computational Efficiency: Total 688.266s, Per-sample 0.036766s
+Acceleration (L2): mean 0.273764, max 4.081686
+Curvature continuity: mean 7.080749, max 274.256622
+Miss Rate (last step >2m): 0.653472
+===========================================
+[2025-07-14 09:24:08,231] [INFO] [launch.py:351:main] Process 2125338 exits successfully.
+[2025-07-14 09:24:08,231] [INFO] [launch.py:351:main] Process 2125336 exits successfully.
+[2025-07-14 09:24:08,231] [INFO] [launch.py:351:main] Process 2125337 exits successfully.
+[2025-07-14 09:24:08,231] [INFO] [launch.py:351:main] Process 2125339 exits successfully.
