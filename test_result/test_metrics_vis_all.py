@@ -218,15 +218,16 @@ def main():
             all_pred_list.append(preds.cpu())
     elapsed_time = time.time() - start_time  # 统计推理总耗时
 
+    file_name = args.llm_model
 
     # 保存所有样本的数据到一个pkl文件中
     if args.use_map:  
-        pkl_save_path = "./saved_trajectories_with_agent_pos_and_map.pkl"
+        pkl_save_path = f"./saved_trajectories_with_agent_pos_and_map_{file_name}.pkl"
         with open(pkl_save_path, 'wb') as f:
             pickle.dump(all_samples, f)
         print(f"All sample data saved to {pkl_save_path}!")
     else:
-        pkl_save_path = "./saved_trajectories_with_agent_pos_and_without_map.pkl"
+        pkl_save_path = f"./saved_trajectories_with_agent_pos_and_without_map_{file_name}.pkl"
         with open(pkl_save_path, 'wb') as f:
             pickle.dump(all_samples, f)
         print(f"All sample data saved to {pkl_save_path}!")

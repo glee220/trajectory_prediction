@@ -1,0 +1,83 @@
+master_port: 21574
+[2025-11-11 16:54:05,971] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[2025-11-11 16:54:07,795] [WARNING] [runner.py:202:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+Detected CUDA_VISIBLE_DEVICES=0,1,2,3: setting --include=localhost:0,1,2,3
+[2025-11-11 16:54:07,795] [INFO] [runner.py:568:main] cmd = /home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMSwgMiwgM119 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None /home/liuyanjiao/trajectory_prediction/test_metrics_vis_all.py --checkpoint_path checkpoints/Exp_qwen_map_20250712_101710/best_model.pth --use_map --llm_model QWEN --llm_model_path ./models/Qwen2.5-7B-Instruct/ --llm_dim 3584
+[2025-11-11 16:54:10,708] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[2025-11-11 16:54:12,507] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0, 1, 2, 3]}
+[2025-11-11 16:54:12,508] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=4, node_rank=0
+[2025-11-11 16:54:12,508] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1, 2, 3]})
+[2025-11-11 16:54:12,508] [INFO] [launch.py:164:main] dist_world_size=4
+[2025-11-11 16:54:12,508] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0,1,2,3
+[2025-11-11 16:54:12,509] [INFO] [launch.py:256:main] process 3214621 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_prediction/test_metrics_vis_all.py', '--local_rank=0', '--checkpoint_path', 'checkpoints/Exp_qwen_map_20250712_101710/best_model.pth', '--use_map', '--llm_model', 'QWEN', '--llm_model_path', './models/Qwen2.5-7B-Instruct/', '--llm_dim', '3584']
+[2025-11-11 16:54:12,511] [INFO] [launch.py:256:main] process 3214622 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_prediction/test_metrics_vis_all.py', '--local_rank=1', '--checkpoint_path', 'checkpoints/Exp_qwen_map_20250712_101710/best_model.pth', '--use_map', '--llm_model', 'QWEN', '--llm_model_path', './models/Qwen2.5-7B-Instruct/', '--llm_dim', '3584']
+[2025-11-11 16:54:12,518] [INFO] [launch.py:256:main] process 3214623 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_prediction/test_metrics_vis_all.py', '--local_rank=2', '--checkpoint_path', 'checkpoints/Exp_qwen_map_20250712_101710/best_model.pth', '--use_map', '--llm_model', 'QWEN', '--llm_model_path', './models/Qwen2.5-7B-Instruct/', '--llm_dim', '3584']
+[2025-11-11 16:54:12,518] [INFO] [launch.py:256:main] process 3214624 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_prediction/test_metrics_vis_all.py', '--local_rank=3', '--checkpoint_path', 'checkpoints/Exp_qwen_map_20250712_101710/best_model.pth', '--use_map', '--llm_model', 'QWEN', '--llm_model_path', './models/Qwen2.5-7B-Instruct/', '--llm_dim', '3584']
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Step 1/2: Loading Qwen1.5-7B-Instruct model...
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Step 1/2: Loading Qwen1.5-7B-Instruct model...
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Step 1/2: Loading Qwen1.5-7B-Instruct model...
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Step 1/2: Loading Qwen1.5-7B-Instruct model...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:12<00:36, 12.00s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:12<00:37, 12.64s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:12<00:37, 12.35s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:12<00:36, 12.14s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:24<00:24, 12.48s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:24<00:24, 12.47s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:25<00:25, 12.63s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:25<00:25, 12.75s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:37<00:12, 12.63s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:37<00:12, 12.56s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:38<00:12, 12.70s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:37<00:12, 12.60s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:48<00:00, 11.95s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:48<00:00, 12.12s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:48<00:00, 11.97s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:48<00:00, 12.15s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:49<00:00, 12.03s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:49<00:00, 12.28s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:48<00:00, 11.99s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:48<00:00, 12.20s/it]
+Model loaded | Device: cpu
+Step 2/2: Loading tokenizer...
+Model loaded | Device: cpu
+Step 2/2: Loading tokenizer...
+Model loaded | Device: cpu
+Step 2/2: Loading tokenizer...
+Model loaded | Device: cpu
+Step 2/2: Loading tokenizer...
+Tokenizer ready!
+[3/3] Config valid | Hidden_size: 3584
+Tokenizer ready!
+[3/3] Config valid | Hidden_size: 3584
+Tokenizer ready!
+[3/3] Config valid | Hidden_size: 3584
+Tokenizer ready!
+[3/3] Config valid | Hidden_size: 3584
+All sample data saved to ./saved_trajectories_with_agent_pos_and_map_QWEN.pkl!
+All sample data saved to ./saved_trajectories_with_agent_pos_and_map_QWEN.pkl!
+All sample data saved to ./saved_trajectories_with_agent_pos_and_map_QWEN.pkl!
+All sample data saved to ./saved_trajectories_with_agent_pos_and_map_QWEN.pkl!
+===========================================
+Total samples evaluated: 18720
+MAE (all steps mean): 3.052080
+FDE   mean: 6.743190, std: 6.858922
+2s    mean: 0.881686, std: 1.059835
+4s    mean: 1.818464, std: 2.443144
+6s    mean: 3.052080, std: 4.265727
+-------------------------------------------
+Computational Efficiency: Total 374.437s, Per-sample 0.020002s
+Acceleration (L2): mean 0.525304, max 6.036429
+Curvature continuity: mean 1.953823, max 49.602142
+Miss Rate (last step >2m): 0.661271
+===========================================
+[2025-11-11 17:02:38,025] [INFO] [launch.py:351:main] Process 3214624 exits successfully.
+[2025-11-11 17:02:38,026] [INFO] [launch.py:351:main] Process 3214623 exits successfully.
+[2025-11-11 17:02:38,026] [INFO] [launch.py:351:main] Process 3214621 exits successfully.
+[2025-11-11 17:02:38,026] [INFO] [launch.py:351:main] Process 3214622 exits successfully.

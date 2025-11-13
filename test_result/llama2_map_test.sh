@@ -1,6 +1,6 @@
 #!/bin/bash 
-#SBATCH --job-name=lyj_qwen_test  # 定义作业名称
-#SBATCH --output=qwen_test_%j.log    # 标准输出文件
+#SBATCH --job-name=lyj_llama2_map_test  # 定义作业名称
+#SBATCH --output=llama2_map_test_%j.log    # 标准输出文件
 #SBATCH --cpus-per-task=2    # 为每个任务分配8个CPU核心。
 #SBATCH --ntasks=1            # 指定任务的数量为1
 #SBATCH --partition=gpujl     # 指定分区为 "gpujl"
@@ -23,13 +23,13 @@ export CUDA_HOME=/usr/local/cuda-12.1
 export PATH=$CUDA_HOME/bin:$PATH
 export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
 
-deepspeed  /home/liuyanjiao/trajectory_predict/test_metrics.py \
-            --checkpoint_path checkpoints/Exp_qwen_map_20250712_101710/best_model.pth \
-            --use_map  \
-            --llm_model QWEN \
-            --llm_model_path ./models/Qwen2.5-7B-Instruct/  \
-            --llm_dim 3584 
+# deepspeed  /home/liuyanjiao/trajectory_predict/test_metrics.py \
+deepspeed  /home/liuyanjiao/trajectory_prediction/test_metrics_vis_all.py \
+            --checkpoint_path checkpoints/Exp_llama2_map_train_20250717_084906/best_model.pth \
+            --llm_model LLAMA \
+            --llm_model_path ./models/Llama-2-7b-hf/ \
+            --use_map 
 
 # 启动
-# sbatch qwen_map_test.sh
-# sbatch --mem=0 qwen_map_test.sh
+# sbatch llama2_map_test.sh
+# sbatch --mem=0 llama2_map_test.sh

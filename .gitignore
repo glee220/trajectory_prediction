@@ -17,7 +17,7 @@ models/WizardLM-7B-V1.0
 # 忽略大数据文件
 *.pkl
 *.index
-# *.ipynb
+*.ipynb
 *.png
 *.pdf
 *.db

@@ -1,0 +1,115 @@
+master_port: 24657
+[2025-11-11 17:03:25,444] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[2025-11-11 17:03:27,278] [WARNING] [runner.py:202:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+Detected CUDA_VISIBLE_DEVICES=0,1,2,3: setting --include=localhost:0,1,2,3
+[2025-11-11 17:03:27,279] [INFO] [runner.py:568:main] cmd = /home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMSwgMiwgM119 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None /home/liuyanjiao/trajectory_prediction/test_metrics_vis_all.py --checkpoint_path checkpoints/Exp_vicuna_map_20250712_101714/best_model.pth --use_map --llm_model vicuna --llm_model_path ./models/vicuna-7b-v1.5/
+[2025-11-11 17:03:30,338] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH
+[93m [WARNING] [0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.2
+[93m [WARNING] [0m using untested triton version (2.2.0), only 1.0.0 is known to be compatible
+[2025-11-11 17:03:32,103] [INFO] [launch.py:146:main] WORLD INFO DICT: {'localhost': [0, 1, 2, 3]}
+[2025-11-11 17:03:32,103] [INFO] [launch.py:152:main] nnodes=1, num_local_procs=4, node_rank=0
+[2025-11-11 17:03:32,103] [INFO] [launch.py:163:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1, 2, 3]})
+[2025-11-11 17:03:32,103] [INFO] [launch.py:164:main] dist_world_size=4
+[2025-11-11 17:03:32,103] [INFO] [launch.py:168:main] Setting CUDA_VISIBLE_DEVICES=0,1,2,3
+[2025-11-11 17:03:32,105] [INFO] [launch.py:256:main] process 3217770 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_prediction/test_metrics_vis_all.py', '--local_rank=0', '--checkpoint_path', 'checkpoints/Exp_vicuna_map_20250712_101714/best_model.pth', '--use_map', '--llm_model', 'vicuna', '--llm_model_path', './models/vicuna-7b-v1.5/']
+[2025-11-11 17:03:32,113] [INFO] [launch.py:256:main] process 3217771 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_prediction/test_metrics_vis_all.py', '--local_rank=1', '--checkpoint_path', 'checkpoints/Exp_vicuna_map_20250712_101714/best_model.pth', '--use_map', '--llm_model', 'vicuna', '--llm_model_path', './models/vicuna-7b-v1.5/']
+[2025-11-11 17:03:32,114] [INFO] [launch.py:256:main] process 3217772 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_prediction/test_metrics_vis_all.py', '--local_rank=2', '--checkpoint_path', 'checkpoints/Exp_vicuna_map_20250712_101714/best_model.pth', '--use_map', '--llm_model', 'vicuna', '--llm_model_path', './models/vicuna-7b-v1.5/']
+[2025-11-11 17:03:32,118] [INFO] [launch.py:256:main] process 3217773 spawned with command: ['/home/liuyanjiao/miniconda3/envs/traj_cuda12/bin/python', '-u', '/home/liuyanjiao/trajectory_prediction/test_metrics_vis_all.py', '--local_rank=3', '--checkpoint_path', 'checkpoints/Exp_vicuna_map_20250712_101714/best_model.pth', '--use_map', '--llm_model', 'vicuna', '--llm_model_path', './models/vicuna-7b-v1.5/']
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/ncls/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[1/3] Loading Vicuna-7B model...
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[1/3] Loading Vicuna-7B model...
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[1/3] Loading Vicuna-7B model...
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[1/3] Loading Vicuna-7B model...
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:36<00:36, 36.01s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:35<00:35, 35.98s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:35<00:35, 36.00s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:36<00:36, 36.66s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:48<00:00, 21.97s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:48<00:00, 24.08s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:48<00:00, 22.08s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:48<00:00, 24.17s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:48<00:00, 22.22s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:48<00:00, 24.38s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:48<00:00, 21.95s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:48<00:00, 24.06s/it]
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:492: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`. This was detected when initializing the generation config instance, which means the corresponding file may hold incorrect parameterization and should be fixed.
+  warnings.warn(
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:492: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`. This was detected when initializing the generation config instance, which means the corresponding file may hold incorrect parameterization and should be fixed.
+  warnings.warn(
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:497: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`. This was detected when initializing the generation config instance, which means the corresponding file may hold incorrect parameterization and should be fixed.
+  warnings.warn(
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:497: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`. This was detected when initializing the generation config instance, which means the corresponding file may hold incorrect parameterization and should be fixed.
+  warnings.warn(
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:492: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:497: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:492: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:497: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+[1/3] Model loaded | Device: cpu
+[2/3] Loading vicuna-7b-v1.5 tokenizer...
+[1/3] Model loaded | Device: cpu
+[2/3] Loading vicuna-7b-v1.5 tokenizer...
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:492: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`. This was detected when initializing the generation config instance, which means the corresponding file may hold incorrect parameterization and should be fixed.
+  warnings.warn(
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:497: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`. This was detected when initializing the generation config instance, which means the corresponding file may hold incorrect parameterization and should be fixed.
+  warnings.warn(
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:492: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:497: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:492: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`. This was detected when initializing the generation config instance, which means the corresponding file may hold incorrect parameterization and should be fixed.
+  warnings.warn(
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:497: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`. This was detected when initializing the generation config instance, which means the corresponding file may hold incorrect parameterization and should be fixed.
+  warnings.warn(
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:492: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/liuyanjiao/miniconda3/envs/traj_cuda12/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:497: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+[1/3] Model loaded | Device: cpu
+[2/3] Loading vicuna-7b-v1.5 tokenizer...
+[1/3] Model loaded | Device: cpu
+[2/3] Loading vicuna-7b-v1.5 tokenizer...
+[2/3] Tokenizer loaded
+[3/3] Hidden_size: 4096
+[2/3] Tokenizer loaded
+[3/3] Hidden_size: 4096
+[2/3] Tokenizer loaded
+[3/3] Hidden_size: 4096
+[2/3] Tokenizer loaded
+[3/3] Hidden_size: 4096
+All sample data saved to ./saved_trajectories_with_agent_pos_and_map_vicuna.pkl!
+All sample data saved to ./saved_trajectories_with_agent_pos_and_map_vicuna.pkl!
+All sample data saved to ./saved_trajectories_with_agent_pos_and_map_vicuna.pkl!
+All sample data saved to ./saved_trajectories_with_agent_pos_and_map_vicuna.pkl!
+===========================================
+Total samples evaluated: 18720
+MAE (all steps mean): 2.997229
+FDE   mean: 6.628179, std: 6.779333
+2s    mean: 0.855747, std: 1.077451
+4s    mean: 1.780955, std: 2.420316
+6s    mean: 2.997229, std: 4.216067
+-------------------------------------------
+Computational Efficiency: Total 359.571s, Per-sample 0.019208s
+Acceleration (L2): mean 0.454197, max 4.364189
+Curvature continuity: mean 4.048430, max 194.508408
+Miss Rate (last step >2m): 0.652350
+===========================================
+[2025-11-11 17:11:38,592] [INFO] [launch.py:351:main] Process 3217771 exits successfully.
+[2025-11-11 17:11:39,593] [INFO] [launch.py:351:main] Process 3217773 exits successfully.
+[2025-11-11 17:11:39,593] [INFO] [launch.py:351:main] Process 3217772 exits successfully.
+[2025-11-11 17:11:39,594] [INFO] [launch.py:351:main] Process 3217770 exits successfully.

@@ -1,6 +1,6 @@
 #!/bin/bash 
-#SBATCH --job-name=lyj_vicuna_test  # 定义作业名称
-#SBATCH --output=vicuna_test_%j.log    # 标准输出文件
+#SBATCH --job-name=lyj_WizardLM_test  # 定义作业名称
+#SBATCH --output=WizardLM_test_%j.log    # 标准输出文件
 #SBATCH --cpus-per-task=2    # 为每个任务分配8个CPU核心。
 #SBATCH --ntasks=1            # 指定任务的数量为1
 #SBATCH --partition=gpujl     # 指定分区为 "gpujl"
@@ -23,12 +23,13 @@ export CUDA_HOME=/usr/local/cuda-12.1
 export PATH=$CUDA_HOME/bin:$PATH
 export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
 
-deepspeed  /home/liuyanjiao/trajectory_predict/test_metrics.py \
-            --checkpoint_path checkpoints/Exp_vicuna_map_20250712_101714/best_model.pth \
+# deepspeed  /home/liuyanjiao/trajectory_predict/test_metrics.py \
+deepspeed  /home/liuyanjiao/trajectory_prediction/test_metrics_vis_all.py \
+            --checkpoint_path checkpoints/Exp_WizardLM_map_20250713_103804/best_model.pth \
             --use_map  \
-            --llm_model vicuna \
-            --llm_model_path ./models/vicuna-7b-v1.5/ 
+            --llm_model WizardLM \
+            --llm_model_path ./models/WizardLM-7B-V1.0/ 
 
 # 启动
-# sbatch vicuna_map_test.sh
-# sbatch --mem=0 vicuna_map_test.sh
+# sbatch WizardLM_map_test.sh
+# sbatch --mem=0 WizardLM_map_test.sh
