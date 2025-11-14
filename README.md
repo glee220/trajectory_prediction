@@ -1,7 +1,7 @@
 
-<img width="1823" height="646" alt="framework_nie" src="https://github.com/user-attachments/assets/4c41b2b9-a26b-4c22-89b7-ee322ea94475" />
 
-# Frozen LLMs as Map-Aware Spatio-Temporal Reasoners for Vehicle Trajectory Prediction #
+# Frozen LLMs as Map-Aware Spatio-Tempo[Fig1.pdf](https://github.com/user-attachments/files/23538012/Fig1.pdf)
+ral Reasoners for Vehicle Trajectory Prediction #
 
 ## Installation ##
 
@@ -115,3 +115,4 @@ During running, each prediction will be iteratively visualized and saved in a `p
 ## NuScenes Datasets ##
 
 If you only want to evaluate models (e.g., produce trajectories and plot them), then the nuScenes mini dataset should be fine. If you want to train a model, then the full nuScenes dataset is required. In either case, you can find them on the [dataset website](https://www.nuscenes.org/).
+
