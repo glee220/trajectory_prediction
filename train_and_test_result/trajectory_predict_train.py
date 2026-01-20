@@ -27,7 +27,7 @@ from accelerate import (
 from torch import nn, optim
 from torch.optim import lr_scheduler
 
-from dataFactory.data_provider import data_provider  
+from .dataFactory.data_provider import data_provider  
 from models import llm_load                            
 from models.GatedAttnTrajLLM import Model        
 

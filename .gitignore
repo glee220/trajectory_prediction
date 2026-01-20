@@ -1,5 +1,6 @@
 # 忽略 checkpoints 目录下所有文件
 checkpoints/
+.conda
 dataFactory/nuScenes/
 dataFactory/v1.0-trainval_meta
 environmnet/models/
