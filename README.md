@@ -5,10 +5,6 @@
 
 ## Installation ##
 
-### Cloning this repository ###
-```
-git clone --recurse-submodules <repository cloning URL>
-```
 
 ### Environment Setup ###
 First, we'll create a conda environment to hold the dependencies.
