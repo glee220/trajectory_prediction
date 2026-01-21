@@ -1,7 +1,7 @@
 
 
-# Frozen LLMs as Map-Aware Spatio-Tempo[Fig1.pdf](https://github.com/user-attachments/files/23538012/Fig1.pdf)
-ral Reasoners for Vehicle Trajectory Prediction #
+# Frozen LLMs as Map-Aware Spatio-Temporal Reasoners for Vehicle Trajectory Prediction #
+![项目架构图](./fig1_resize.png)
 
 ## Installation ##
 
