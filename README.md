@@ -18,8 +18,16 @@ conda activate <environment_name>
 
 
 
-## NuScenes Datasets ##
+## Datasets ##
+/precess_data/preprocess_first_run.py this file will preprocess nuScenes dataset to fit our model .
+the data will be precess into .pkl and .index for lazyLoading for training or testing.
 
-If you only want to evaluate models (e.g., produce trajectories and plot them), then the nuScenes mini dataset should be fine. If you want to train a model, then the full nuScenes dataset is required. In either case, you can find them on the [dataset website](https://www.nuscenes.org/).
+## Train ##
+the model is training on 4 48G GPUs using about 10hs one traing we use sbatch to submit our mission
+the training script is in this path : trajectory_prediction/train_and_test_result/trajectory_predict_train.py
+
+## Test ##
+the testing script is in this path : trajectory_prediction/train_and_test_result/test_metrics.py
+
 
 

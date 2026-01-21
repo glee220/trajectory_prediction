@@ -7,12 +7,16 @@ import torch.optim as optim
 import torch.nn.functional as F
 from torch import nn
 from torch.utils.data import DataLoader
+from pathlib import Path
 from utils.tools import EarlyStopping  # 假设已经有的早停机制
 from dataFactory.data_provider import data_provider  # 假设已实现的数据加载
 from utils.init_weight import init_weights
+import datetime
 
 # 设置训练环境
 def setup_environment(seed: int):
+    # 设置 CUDA 可见设备，限制为使用 CUDA 设备 2 或 3
+    os.environ["CUDA_VISIBLE_DEVICES"] = "2"  # 或者 "3"
     os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:32"  # 减少内存碎片
     os.environ["TOKENIZERS_PARALLELISM"] = "false"
     random.seed(seed)
@@ -24,6 +28,11 @@ def build_dataloaders(args):
     train_data_set, train_dl = data_provider(args, "train")
     val_data_set, val_dl = data_provider(args, "val")
     return train_dl, val_dl
+
+def _ckpt_dir(self, ts) -> Path:
+    p = Path("./cvae_checkpoints") / f"Exp_{self.args.use_map}_{ts}"
+    p.mkdir(parents=True, exist_ok=True)
+    return p
 
 # ------------------
 
@@ -358,6 +367,13 @@ class Trainer:
 
     def train(self):
         best_val_loss = float('inf')
+    
+        # 在训练开始时生成一个固定的时间戳
+        training_start_time = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+        base_path = Path("./cvae_checkpoints/")
+        base_path.mkdir(parents=True, exist_ok=True)
+    
+
         for epoch in range(self.args.train_epochs):
             self.cvae_model.train()
             epoch_loss = 0
@@ -366,35 +382,47 @@ class Trainer:
                 epoch_loss += loss
                 if (step + 1) % 100 == 0:
                     print(f"Epoch {epoch+1}, Step {step+1}, Loss: {loss:.4f}")
+        # ————————————————————————————
+                avg_train_loss = epoch_loss / len(self.train_dl)
+                val_loss = self.evaluate(self.val_dl)
 
-            avg_train_loss = epoch_loss / len(self.train_dl)
-            val_loss = self.evaluate(self.val_dl)
+                print(f"Epoch {epoch+1}, Train Loss: {avg_train_loss:.4f}, Val Loss: {val_loss:.4f}")
 
-            print(f"Epoch {epoch+1}, Train Loss: {avg_train_loss:.4f}, Val Loss: {val_loss:.4f}")
+                if val_loss < best_val_loss:
+                    best_val_loss = val_loss
+                    print(f'{self.args.use_map}_cvae_best_model.pth')
+                    torch.save(self.cvae_model.state_dict(), f'{self.args.use_map}_cvae_best_model.pth')
 
-            if val_loss < best_val_loss:
-                best_val_loss = val_loss
-                print("self.cvae_model.state_dict()",self.cvae_model.state_dict(),f'{self.args.use_map}_cvae_best_model.pth')
-                torch.save(self.cvae_model.state_dict(), f'{self.args.use_map}_cvae_best_model.pth')
+                    # 使用训练开始的时间戳保存带时间戳的模型
+                    checkpoint_path = base_path / f"{self.args.use_map}_cvae_best_model_{training_start_time}.pth"
+                    torch.save(self.cvae_model.state_dict(), checkpoint_path)
+                    
+                    print(f"Best model updated and saved: {checkpoint_path}")
 
-            self.early_stopping(val_loss, self.cvae_model)
-            if self.early_stopping.early_stop:
-                print("Early stopping triggered")
-                break
+                # 调用 early_stopping
+                self.early_stopping(val_loss, self.cvae_model, checkpoint_path)
+
+                if self.early_stopping.early_stop:
+                    print("Early stopping triggered")
+                    break
+        # ————————————————————————————
+        
+        # 训练结束后，可以输出最终保存的模型路径
+        print(f"Training completed. Best model saved with timestamp: {training_start_time}")
 
 # 主函数
 def main():
     parser = argparse.ArgumentParser(description="CVAE Trajectory Prediction")
     parser.add_argument("--train_epochs", type=int, default=20, help="Number of epochs")
     parser.add_argument("--learning_rate", type=float, default=1e-4, help="Learning rate")
-    parser.add_argument("--patience", type=int, default=5, help="Early stopping patience")
+    parser.add_argument("--patience", type=int, default=5, help="Early stopping patience") 
     parser.add_argument("--seq_len", type=int, default=4, help="Length of historical sequence")
     parser.add_argument("--pred_len", type=int, default=12, help="Length of prediction sequence")
     parser.add_argument("--use_map", default=True, help="Use map as condition input")
 
     parser.add_argument("--root_path", default="./precess_data")
     parser.add_argument("--micro_batch", type=int, default=32, help="samples per GPU, per step")
-    parser.add_argument('--num_workers', type=int, default=4, help='data loader num workers')
+    parser.add_argument('--num_workers', type=int, default=1, help='data loader num workers')
     args = parser.parse_args()
 
     setup_environment(seed=42)
