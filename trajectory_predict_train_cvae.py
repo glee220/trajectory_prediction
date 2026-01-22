@@ -16,7 +16,7 @@ import datetime
 # 设置训练环境
 def setup_environment(seed: int):
     # 设置 CUDA 可见设备，限制为使用 CUDA 设备 2 或 3
-    os.environ["CUDA_VISIBLE_DEVICES"] = "2"  # 或者 "3"
+    # os.environ["CUDA_VISIBLE_DEVICES"] = "3"  # 或者 "3"
     os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:32"  # 减少内存碎片
     os.environ["TOKENIZERS_PARALLELISM"] = "false"
     random.seed(seed)
@@ -28,11 +28,6 @@ def build_dataloaders(args):
     train_data_set, train_dl = data_provider(args, "train")
     val_data_set, val_dl = data_provider(args, "val")
     return train_dl, val_dl
-
-def _ckpt_dir(self, ts) -> Path:
-    p = Path("./cvae_checkpoints") / f"Exp_{self.args.use_map}_{ts}"
-    p.mkdir(parents=True, exist_ok=True)
-    return p
 
 # ------------------
 
@@ -386,27 +381,27 @@ class Trainer:
                 if (step + 1) % 100 == 0:
                     print(f"Epoch {epoch+1}, Step {step+1}, Loss: {loss:.4f}")
             
-                # 每个epoch结束后进行验证
-                avg_train_loss = epoch_loss / len(self.train_dl)
-                val_loss = self.evaluate(self.val_dl)
+            # 每个epoch结束后进行验证
+            avg_train_loss = epoch_loss / len(self.train_dl)
+            val_loss = self.evaluate(self.val_dl)
 
-                print(f"Epoch {epoch+1}, Train Loss: {avg_train_loss:.4f}, Val Loss: {val_loss:.4f}")
-                
-                if val_loss < best_val_loss:
-                    best_val_loss = val_loss
-                    
-                    # 保存固定名称的最佳模型
-                    torch.save(self.cvae_model.state_dict(), f'{self.args.use_map}_cvae_best_model.pth')
-                    
-                    # 使用训练开始的时间戳保存带时间戳的模型
-                    best_model_path = base_path / f"{self.args.use_map}_cvae_best_model_{training_start_time}.pth"
-                    torch.save(self.cvae_model.state_dict(), best_model_path)
-                    
-                    print(f"Best model updated and saved: {best_model_path}")
+            print(f"Epoch {epoch+1}, Train Loss: {avg_train_loss:.4f}, Val Loss: {val_loss:.4f}")
             
-                # 训练结束后，输出最终保存的模型路径
-                print(f"Training completed. Best model saved with timestamp: {training_start_time}")
-                print(f"Best validation loss achieved: {best_val_loss:.4f}")
+            if val_loss < best_val_loss:
+                best_val_loss = val_loss
+                
+                # 保存固定名称的最佳模型
+                torch.save(self.cvae_model.state_dict(), f'{self.args.use_map}_cvae_best_model.pth')
+                
+                # 使用训练开始的时间戳保存带时间戳的模型
+                best_model_path = base_path / f"{self.args.use_map}_cvae_best_model_{training_start_time}.pth"
+                torch.save(self.cvae_model.state_dict(), best_model_path)
+                
+                print(f"Best model updated and saved: {best_model_path}")
+            
+        # 训练结束后，输出最终保存的模型路径
+        print(f"Training completed. Best model saved with timestamp: {training_start_time}")
+        print(f"Best validation loss achieved: {best_val_loss:.4f}")
 
 # 主函数
 def main():

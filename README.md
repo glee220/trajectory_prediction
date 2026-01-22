@@ -16,19 +16,21 @@ conda activate <environment_name>
 
 ### Datasets ###
 ```
-/precess_data/preprocess_first_run.py this file will preprocess nuScenes dataset to fit our model .
-the data will be precess into .pkl and .index for lazyLoading for training or testing.
+/precess_data/preprocess_first_run.py 
+This script preprocesses the nuScenes dataset to prepare it for our model. 
+The data will be processed into .pkl and .index files, enabling lazy loading for efficient training and testing.
 ```
 
 ### Train ###
 ```
-the model is training on 4 48G GPUs using about 10hs one traing we use sbatch to submit our mission
-the training script is in this path : trajectory_prediction/train_and_test_result/trajectory_predict_train.py
+The model is trained on four 48GB GPUs, with each training session taking approximately 10 hours. We use sbatch to submit the job.
+The training script can be found at: 
+trajectory_prediction/train_and_test_result/trajectory_predict_train.py
 ```
 
 ### Test ###
 ```
-the testing script is in this path : trajectory_prediction/train_and_test_result/test_metrics.py
+The testing script is located at: trajectory_prediction/train_and_test_result/test_metrics.py
 ```
 
 
