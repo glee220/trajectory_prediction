@@ -16,7 +16,7 @@ conda activate <environment_name>
 
 ### Datasets ###
 ```
-/precess_data/preprocess_first_run.py 
+/process_data/preprocess_first_run.py 
 This script preprocesses the nuScenes dataset to prepare it for our model. 
 The data will be processed into .pkl and .index files, enabling lazy loading for efficient training and testing.
 ```
