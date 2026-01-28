@@ -34,3 +34,23 @@ The testing script is located at: trajectory_prediction/train_and_test_result/te
 ```
 
 
+# Project Title
+
+## Introduction
+This project aims to develop a robust method for vehicle trajectory prediction using frozen LLMs (Large Language Models) integrated with map-aware spatio-temporal reasoning.
+
+## Citations
+
+### Papers
+- **Yanjiao Liu, Jiawei Liu, Xun Gong, Zifei Nie.** "Frozen LLMs as Map-Aware Spatio-Temporal Reasoners for Vehicle Trajectory Prediction." *Proceedings of the 2026 IEEE Intelligent Vehicles Symposium (IV)*, Manuscript 216, 2026.
+
+If you use this project or parts of it in your work, please cite the paper as follows:
+
+```bibtex
+@inproceedings{liu2026frozen,
+  author    = {Yanjiao Liu and Jiawei Liu and Xun Gong and Zifei Nie},
+  title     = {Frozen LLMs as Map-Aware Spatio-Temporal Reasoners for Vehicle Trajectory Prediction},
+  booktitle = {Proceedings of the 2026 IEEE Intelligent Vehicles Symposium (IV)},
+  year      = {2026},
+  manuscript = {216}
+}
