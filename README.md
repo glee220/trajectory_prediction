@@ -47,10 +47,12 @@ This project aims to develop a robust method for vehicle trajectory prediction u
 If you use this project or parts of it in your work, please cite the paper as follows:
 
 ```bibtex
-@inproceedings{liu2026frozen,
-  author    = {Yanjiao Liu and Jiawei Liu and Xun Gong and Zifei Nie},
-  title     = {Frozen LLMs as Map-Aware Spatio-Temporal Reasoners for Vehicle Trajectory Prediction},
-  booktitle = {Proceedings of the 2026 IEEE Intelligent Vehicles Symposium (IV)},
-  year      = {2026},
-  manuscript = {216}
+@misc{liu2026frozenllmsmapawarespatiotemporal,
+      title={Frozen LLMs as Map-Aware Spatio-Temporal Reasoners for Vehicle Trajectory Prediction}, 
+      author={Yanjiao Liu and Jiawei Liu and Xun Gong and Zifei Nie},
+      year={2026},
+      eprint={2604.21479},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2604.21479}, 
 }
